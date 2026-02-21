@@ -7,7 +7,7 @@ export default function ProgressBar({ investedPct }: ProgressBarProps) {
 
   return (
     <div>
-      <div className="flex justify-between text-[11px] mb-[6px]" style={{ color: "var(--text-faint)" }}>
+      <div className="flex justify-between text-[11px] mb-[6px] text-slate-400 dark:text-slate-600">
         <span>Invested</span>
         <span>Gains</span>
       </div>
@@ -17,7 +17,7 @@ export default function ProgressBar({ investedPct }: ProgressBarProps) {
           style={{ width: `${investedPct}%` }}
         />
       </div>
-      <div className="flex justify-between text-[11px] mt-1" style={{ color: "var(--text-faint)" }}>
+      <div className="flex justify-between text-[11px] mt-1 text-slate-400 dark:text-slate-600">
         <span>{investedPct}%</span>
         <span>{gainsPct}%</span>
       </div>

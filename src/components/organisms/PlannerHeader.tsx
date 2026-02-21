@@ -12,7 +12,7 @@ export default function PlannerHeader() {
       >
         Your Path to ₹1 Crore
       </h1>
-      <p className="m-0 text-[15px]" style={{ color: "var(--text-muted)" }}>
+      <p className="m-0 text-[15px] text-slate-500">
         Adjust your monthly SIP &amp; target to see how quickly wealth compounds
       </p>
     </div>

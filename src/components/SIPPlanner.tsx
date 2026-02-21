@@ -28,8 +28,8 @@ export default function SIPPlanner() {
   return (
     <div
       data-theme={isDark ? "dark" : "light"}
-      className="min-h-screen px-4 py-8"
-      style={{ background: "var(--bg-page)", color: "var(--text-primary)", fontFamily: "var(--font-dm-sans), 'Segoe UI', sans-serif" }}
+      className="min-h-screen px-4 py-8 text-slate-900 dark:text-slate-200"
+      style={{ background: "var(--bg-page)", fontFamily: "var(--font-dm-sans), 'Segoe UI', sans-serif" }}
     >
       <ThemeToggle isDark={isDark} onToggle={() => setIsDark((d) => !d)} />
       <PlannerHeader />
@@ -44,7 +44,7 @@ export default function SIPPlanner() {
       <ResultCard result={active} rate={rate} />
       <GrowthChart data={active.data} rate={rate} />
       <ComparisonTable results={results} />
-      <p className="text-center text-[11px] mt-3" style={{ color: "var(--text-subtle)" }}>
+      <p className="text-center text-[11px] mt-3 text-slate-300 dark:text-slate-700">
         ⚠️ For educational purposes only. Past returns do not guarantee future performance. Consult a SEBI-registered advisor.
       </p>
     </div>

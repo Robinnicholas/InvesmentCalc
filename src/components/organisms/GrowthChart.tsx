@@ -23,7 +23,7 @@ export default function GrowthChart({ data, rate }: GrowthChartProps) {
 
   return (
     <div className="max-w-[900px] mx-auto mb-7 rounded-[20px] p-6" style={{ background: "var(--bg-surface-dim)", border: "1px solid var(--border-color)" }}>
-      <p className="mt-0 mb-5 font-semibold text-sm" style={{ color: "var(--text-secondary)" }}>
+      <p className="mt-0 mb-5 font-semibold text-sm text-slate-700 dark:text-slate-400">
         Corpus Growth Over Time
       </p>
       <ResponsiveContainer width="100%" height={220}>

@@ -11,7 +11,7 @@ export default function ComparisonTable({ results }: ComparisonTableProps) {
   return (
     <div className="max-w-[900px] mx-auto mb-5 rounded-[20px] overflow-hidden" style={{ background: "var(--bg-surface-dim)", border: "1px solid var(--border-color)" }}>
       <div className="px-6 pt-[18px] pb-3" style={{ borderBottom: "1px solid var(--border-faint)" }}>
-        <p className="m-0 font-semibold text-sm" style={{ color: "var(--text-secondary)" }}>
+        <p className="m-0 font-semibold text-sm text-slate-700 dark:text-slate-400">
           All Scenarios Compared
         </p>
       </div>
@@ -22,8 +22,7 @@ export default function ComparisonTable({ results }: ComparisonTableProps) {
               {HEADERS.map((h) => (
                 <th
                   key={h}
-                  className="px-4 py-3 text-left font-semibold text-[11px] tracking-[0.5px] uppercase whitespace-nowrap"
-                  style={{ color: "var(--text-faint)" }}
+                  className="px-4 py-3 text-left font-semibold text-[11px] tracking-[0.5px] uppercase whitespace-nowrap text-slate-400 dark:text-slate-600"
                 >
                   {h}
                 </th>
@@ -38,11 +37,11 @@ export default function ComparisonTable({ results }: ComparisonTableProps) {
                 <tr key={i} style={{ borderTop: "1px solid var(--border-subtler)" }}>
                   <td className="px-4 py-3">
                     <span className="font-bold" style={{ color: r.color }}>{r.label}</span>
-                    <span className="block text-[11px] mt-[2px]" style={{ color: "var(--text-faint)" }}>{r.desc}</span>
+                    <span className="block text-[11px] mt-[2px] text-slate-400 dark:text-slate-600">{r.desc}</span>
                   </td>
                   <td
-                    className="px-4 py-3"
-                    style={{ color: "var(--text-secondary)", fontFamily: "var(--font-dm-mono), monospace" }}
+                    className="px-4 py-3 text-slate-700 dark:text-slate-400"
+                    style={{ fontFamily: "var(--font-dm-mono), monospace" }}
                   >
                     {r.rate}%
                   </td>
@@ -53,8 +52,8 @@ export default function ComparisonTable({ results }: ComparisonTableProps) {
                     {r.months ? formatYear(r.months) : "—"}
                   </td>
                   <td
-                    className="px-4 py-3"
-                    style={{ color: "var(--text-secondary)", fontFamily: "var(--font-dm-mono), monospace" }}
+                    className="px-4 py-3 text-slate-700 dark:text-slate-400"
+                    style={{ fontFamily: "var(--font-dm-mono), monospace" }}
                   >
                     {r.invested ? formatCrore(r.invested) : "—"}
                   </td>
@@ -66,8 +65,8 @@ export default function ComparisonTable({ results }: ComparisonTableProps) {
                   </td>
                   <td className="px-4 py-3">
                     <span
-                      className="font-bold block mb-[6px]"
-                      style={{ color: "var(--text-primary)", fontFamily: "var(--font-dm-mono), monospace" }}
+                      className="font-bold block mb-[6px] text-slate-900 dark:text-slate-200"
+                      style={{ fontFamily: "var(--font-dm-mono), monospace" }}
                     >
                       {r.corpus ? formatCrore(r.corpus) : "—"}
                     </span>
@@ -81,7 +80,7 @@ export default function ComparisonTable({ results }: ComparisonTableProps) {
                         style={{ width: `${gainsPct}%` }}
                       />
                     </div>
-                    <div className="flex justify-between mt-[3px] text-[10px]" style={{ color: "var(--text-faint)" }}>
+                    <div className="flex justify-between mt-[3px] text-[10px] text-slate-400 dark:text-slate-600">
                       <span>{investedPct}% invested</span>
                       <span className="text-emerald-400">{gainsPct}% gains</span>
                     </div>

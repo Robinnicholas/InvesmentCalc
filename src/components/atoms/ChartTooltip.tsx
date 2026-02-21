@@ -16,8 +16,8 @@ export default function ChartTooltip({ active, payload, label }: ChartTooltipPro
   if (!active || !payload?.length) return null;
 
   return (
-    <div className="rounded-xl px-4 py-3 text-[13px]" style={{ background: "var(--tooltip-bg)", border: "1px solid var(--tooltip-border)", color: "var(--text-primary)" }}>
-      <p className="mt-0 mb-[6px] font-bold" style={{ color: "var(--text-secondary)" }}>Year {label}</p>
+    <div className="rounded-xl px-4 py-3 text-[13px] text-slate-900 dark:text-slate-200" style={{ background: "var(--tooltip-bg)", border: "1px solid var(--tooltip-border)" }}>
+      <p className="mt-0 mb-[6px] font-bold text-slate-700 dark:text-slate-400">Year {label}</p>
       {payload.map((p, i) => (
         <p key={i} className="my-[2px]" style={{ color: p.color }}>
           {p.name}: {formatCrore(p.value)}

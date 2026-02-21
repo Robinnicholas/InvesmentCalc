@@ -23,12 +23,12 @@ export default function InputCard({
 }: InputCardProps) {
   return (
     <div className="rounded-2xl px-6 py-5" style={{ background: "var(--bg-surface)", border: "1px solid var(--border-color)" }}>
-      <p className="mt-0 mb-[6px] text-xs font-semibold tracking-[1px] uppercase" style={{ color: "var(--text-muted)" }}>
+      <p className="mt-0 mb-[6px] text-xs font-semibold tracking-[1px] uppercase text-slate-500">
         {label}
       </p>
       <p
-        className="mt-0 mb-3 text-[22px] font-bold"
-        style={{ color: "var(--text-primary)", fontFamily: "var(--font-dm-mono), monospace" }}
+        className="mt-0 mb-3 text-[22px] font-bold text-slate-900 dark:text-slate-200"
+        style={{ fontFamily: "var(--font-dm-mono), monospace" }}
       >
         {format(value)}
       </p>

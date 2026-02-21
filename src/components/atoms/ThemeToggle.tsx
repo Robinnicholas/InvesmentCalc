@@ -8,11 +8,10 @@ export default function ThemeToggle({ isDark, onToggle }: ThemeToggleProps) {
     <button
       onClick={onToggle}
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-      className="fixed top-4 right-4 z-50 flex items-center justify-center w-10 h-10 rounded-full border transition-all duration-200"
+      className="fixed top-4 right-4 z-50 flex items-center justify-center w-10 h-10 rounded-full border transition-all duration-200 text-slate-700 dark:text-slate-400"
       style={{
         background: "var(--bg-surface)",
         borderColor: "var(--border-color)",
-        color: "var(--text-secondary)",
       }}
     >
       {isDark ? (
