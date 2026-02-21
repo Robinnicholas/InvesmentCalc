@@ -6,9 +6,11 @@ import InputSection from "@/components/organisms/InputSection";
 import ResultCard from "@/components/organisms/ResultCard";
 import GrowthChart from "@/components/organisms/GrowthChart";
 import ComparisonTable from "@/components/organisms/ComparisonTable";
+import ThemeToggle from "@/components/atoms/ThemeToggle";
 import { computeSIP, SCENARIOS } from "@/utils/sipCalculations";
 
 export default function SIPPlanner() {
+  const [isDark, setIsDark] = useState(true);
   const [monthly, setMonthly] = useState(30000);
   const [target, setTarget] = useState(10000000);
   const [rate, setRate] = useState(12);
@@ -25,9 +27,11 @@ export default function SIPPlanner() {
 
   return (
     <div
-      className="min-h-screen bg-[linear-gradient(135deg,#0a0a14_0%,#0f172a_50%,#0a0a14_100%)] text-slate-200 px-4 py-8"
-      style={{ fontFamily: "var(--font-dm-sans), 'Segoe UI', sans-serif" }}
+      data-theme={isDark ? "dark" : "light"}
+      className="min-h-screen px-4 py-8"
+      style={{ background: "var(--bg-page)", color: "var(--text-primary)", fontFamily: "var(--font-dm-sans), 'Segoe UI', sans-serif" }}
     >
+      <ThemeToggle isDark={isDark} onToggle={() => setIsDark((d) => !d)} />
       <PlannerHeader />
       <InputSection
         monthly={monthly}
@@ -40,7 +44,7 @@ export default function SIPPlanner() {
       <ResultCard result={active} rate={rate} />
       <GrowthChart data={active.data} rate={rate} />
       <ComparisonTable results={results} />
-      <p className="text-center text-[11px] text-slate-700 mt-3">
+      <p className="text-center text-[11px] mt-3" style={{ color: "var(--text-subtle)" }}>
         ⚠️ For educational purposes only. Past returns do not guarantee future performance. Consult a SEBI-registered advisor.
       </p>
     </div>

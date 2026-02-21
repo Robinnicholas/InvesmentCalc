@@ -22,8 +22,8 @@ export default function GrowthChart({ data, rate }: GrowthChartProps) {
   const color = rateColor(rate);
 
   return (
-    <div className="max-w-[900px] mx-auto mb-7 bg-white/2 border border-white/[0.07] rounded-[20px] p-6">
-      <p className="mt-0 mb-5 font-semibold text-sm text-slate-400">
+    <div className="max-w-[900px] mx-auto mb-7 rounded-[20px] p-6" style={{ background: "var(--bg-surface-dim)", border: "1px solid var(--border-color)" }}>
+      <p className="mt-0 mb-5 font-semibold text-sm" style={{ color: "var(--text-secondary)" }}>
         Corpus Growth Over Time
       </p>
       <ResponsiveContainer width="100%" height={220}>
@@ -38,7 +38,7 @@ export default function GrowthChart({ data, rate }: GrowthChartProps) {
               <stop offset="95%" stopColor="#475569" stopOpacity={0} />
             </linearGradient>
           </defs>
-          <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.04)" />
+          <CartesianGrid strokeDasharray="3 3" stroke="var(--border-subtler)" />
           <XAxis
             dataKey="year"
             tick={{ fill: "#475569", fontSize: 11 }}

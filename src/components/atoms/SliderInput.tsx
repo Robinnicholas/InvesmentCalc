@@ -31,7 +31,7 @@ export default function SliderInput({
         className="w-full cursor-pointer"
         style={{ accentColor }}
       />
-      <div className="flex justify-between text-[11px] text-slate-600 mt-1">
+      <div className="flex justify-between text-[11px] mt-1" style={{ color: "var(--text-faint)" }}>
         <span>{minLabel}</span>
         <span>{maxLabel}</span>
       </div>

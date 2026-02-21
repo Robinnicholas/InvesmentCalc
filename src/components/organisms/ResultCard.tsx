@@ -22,7 +22,7 @@ export default function ResultCard({ result, rate }: ResultCardProps) {
         border: `1px solid ${color}40`,
       }}
     >
-      <p className="mt-0 mb-[6px] text-xs text-slate-500 font-semibold tracking-[1px] uppercase">
+      <p className="mt-0 mb-[6px] text-xs font-semibold tracking-[1px] uppercase" style={{ color: "var(--text-muted)" }}>
         {rateLabel(rate)}
       </p>
       <div className="grid grid-cols-3 gap-5 mt-4">
